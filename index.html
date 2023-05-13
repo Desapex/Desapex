@@ -104,7 +104,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             const emailValue = document.getElementsByName('Email')[0].value;
-            setCookie('email', emailValue, 365);
+            setCookie('Email', emailValue, 365);
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => alert("Unsubscribing was successful!"))
                 .catch(error => console.error('Error!', error.message));
@@ -131,7 +131,7 @@
         }
 
         // Get the email value from the cookie
-        const emailCookie = getCookie('email');
+        const emailCookie = getCookie('Email');
         document.getElementsByName('Email')[0].value = emailCookie;
     </script>
 </body>
