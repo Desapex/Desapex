@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automatic Email Fill</title>
+</head>
+<body>
+  <form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Get the email input field by its ID
+    var emailInput = document.getElementById('email');
+
+    // Retrieve the email address from the URL query parameters
+    var urlParams = new URLSearchParams(window.location.search);
+    var email = urlParams.get('email');
+
+    // Set the value of the email input field to the retrieved email address
+    if (email) {
+      emailInput.value = email;
+    }
+  </script>
+</body>
+</html>
