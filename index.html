@@ -88,23 +88,14 @@
               </div>
             </div>
         </div>
-          
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHdj9q4F7ewJvcttISsV884TgeMc25SJS6I9B24Cd-gj3fkiXXCfqfOT_anpsmWi1g/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("We're sorry to see you go."))
-                .catch(error => console.error('Error!', error.message))
-            });
-
-  // Get the email value from the cookie
+		   // Get the email value from the cookie
   const emailCookie = getCookie('email');
   document.getElementsByName('Email')[0].value = emailCookie;
-
-  // Function to get the value of a cookie
+		  
+		   // Function to get the value of a cookie
   function getCookie(name) {
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -115,15 +106,29 @@
     }
     return '';
   }
+		  
+		  
 			  function fillEmail() {
   var email = document.getElementById("email").value;
   if (email != "") {
     document.getElementById("email").value = email;
   }
 }
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHdj9q4F7ewJvcttISsV884TgeMc25SJS6I9B24Cd-gj3fkiXXCfqfOT_anpsmWi1g/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("We're sorry to see you go."))
+                .catch(error => console.error('Error!', error.message))
+            });
+
+ 
+ 
           </script>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
 </body>
 </html>
